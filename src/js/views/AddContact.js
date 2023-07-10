@@ -10,8 +10,6 @@ export const AddContact = () => {
 		phone: ""
 	});
 
-	// const navigate = useNavigate();
-
 	//Crear contacto
 	const createContact = event => {
 		event.preventDefault();
@@ -21,12 +19,11 @@ export const AddContact = () => {
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify(contact) // body data type must match "Content-Type" header
-		}) //busca informacion a la url dada con el metodo especificado
-			.then(response => response.json()) // => convierto la respuesta buscada en un json => {"info":{},"results":[]} "hola"
-			.then(data => console.log(data)) // => guardo el json en un espacio de memoria
-			// .then(response => navigate("/"))
-			.catch(error => console.log(error)); // => te aviso si algo sale mal
+			body: JSON.stringify(contact)
+		})
+			.then(response => response.json())
+			.then(data => console.log(data))
+			.catch(error => console.log(error));
 	};
 
 	const handleChange = event => {

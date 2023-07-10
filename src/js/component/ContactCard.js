@@ -1,14 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import MikePhoto from "../../img/m101.jpg";
 import { Context } from "../store/appContext.js";
 
 export const ContactCard = props => {
-	const [state, setState] = useState({
-		//initialize state here
-	});
-
 	const { actions } = useContext(Context);
 
 	const handleUpdate = () => {
@@ -57,10 +52,6 @@ export const ContactCard = props => {
 	);
 };
 
-/**
- * Define the data-types for
- * your component's properties
- **/
 ContactCard.propTypes = {
 	history: PropTypes.object,
 	onDelete: PropTypes.func,
@@ -72,10 +63,6 @@ ContactCard.propTypes = {
 	id: PropTypes.string
 };
 
-/**
- * Define the default values for
- * your component's properties
- **/
 ContactCard.defaultProps = {
 	onDelete: null,
 	onUpdate: null

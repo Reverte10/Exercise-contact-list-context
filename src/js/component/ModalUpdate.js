@@ -1,15 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
-// import { useNavigate } from "react-router-dom";
 
 export const ModalUpdate = props => {
-	// const [state, setState] = useState({
-	// 	//initialize state here
-	// });
 	const { actions, store } = useContext(Context);
-	//Declarar el useNavigate
-	// const navigate = useNavigate();
 
 	const contactInfo = store.contactInfo;
 
@@ -34,7 +28,6 @@ export const ModalUpdate = props => {
 	};
 
 	useEffect(() => {
-		//condicion ? true : false
 		props.id ? actions.oneParticularContact(props.id) : null;
 	}, []);
 
@@ -126,10 +119,7 @@ export const ModalUpdate = props => {
 		</div>
 	);
 };
-/**
- * Define the data-types for
- * your component's properties
- **/
+
 ModalUpdate.propTypes = {
 	history: PropTypes.object,
 	onClose: PropTypes.func,
@@ -137,10 +127,6 @@ ModalUpdate.propTypes = {
 	id: PropTypes.string
 };
 
-/**
- * Define the default values for
- * your component's properties
- **/
 ModalUpdate.defaultProps = {
 	show: false,
 	onClose: null

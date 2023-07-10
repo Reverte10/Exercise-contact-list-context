@@ -58,11 +58,7 @@ export const Contacts = () => {
 				</div>
 			</div>
 			<Modal show={state.showModal} onClose={() => setState({ showModal: false })} id={state.id} />
-			<ModalUpdate
-				show={stateUpdate.showModal}
-				onClose={() => setStateUpdate({ showModal: false })}
-				// id={stateUpdate.id}
-			/>
+			<ModalUpdate show={stateUpdate.showModal} onClose={() => setStateUpdate({ showModal: false })} />
 		</div>
 	);
 };
