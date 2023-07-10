@@ -5,7 +5,7 @@ export const AddContact = () => {
 	const [contact, setContact] = useState({
 		full_name: "",
 		email: "",
-		agenda_slug: "agendabertablancpastor",
+		agenda_slug: "sergioreverteagenda",
 		address: "",
 		phone: ""
 	});

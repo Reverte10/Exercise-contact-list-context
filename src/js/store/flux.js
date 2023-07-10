@@ -10,7 +10,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 			// Remember to use the scope: scope.state.store & scope.setState()
 			//1.Get All available agendas right now
 			getContacts: () => {
-				fetch("https://assets.breatheco.de/apis/fake/contact/agenda/agendabertablancpastor", {
+				fetch("https://assets.breatheco.de/apis/fake/contact/agenda/sergioreverteagenda", {
 					method: "GET"
 				})
 					.then(response => response.json())
@@ -29,7 +29,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 					body: JSON.stringify({
 						full_name: full_name,
 						email: email,
-						agenda_slug: "agendabertablancpastor",
+						agenda_slug: "sergioreverteagenda",
 						address: address,
 						phone: phone
 					}) // body data type must match "Content-Type" header
